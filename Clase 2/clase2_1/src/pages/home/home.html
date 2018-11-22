@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>
+      Clase 2.1 Practica de Listas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-slides pager>
+    <ion-slide>
+      <img src="./assets/imgs/Koala.jpg"/>
+      <h2>Koala</h2>
+      <p>Habitan el Oriente del Planeta, China, Rusia, India</p>
+    </ion-slide>
+    <ion-slide>
+      <img src="./assets/imgs/Penguins.jpg"/>
+      <h2>Pinguinos</h2>
+      <p>Habitan el Norte y Sur del Planeta, Antartida y Polo Sur</p>
+    </ion-slide>
+  </ion-slides>
+  <!-- Cards -->
+  <ion-card>
+    <ion-card-header>
+        Noticias de La Vida Silvestre
+    </ion-card-header>
+      <img src="./assets/imgs/Koala.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        Koalas de China
+      </ion-card-title>
+      <p>Su Alimentacion es de Bambu y Frutas</p>
+      <button ion-button clear text-capitalize>Saber Mas...</button>
+    </ion-card-content>
+  </ion-card>
+  <!-- Lista con Avatares -->
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="./assets/imgs/Koala.jpg"/>
+      </ion-avatar>
+      Koala
+      <button ion-button clear item-end>
+        Mas..
+      </button>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="./assets/imgs/Lighthouse.jpg"/>
+      </ion-avatar>
+      Faro
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+          <img src="./assets/imgs/Penguins.jpg"/>
+      </ion-avatar>
+      Pinguinos
+    </ion-item>
+  </ion-list>
+  <!-- Lista de Lineas -->
+  <ion-list>
+    <ion-list-header>
+      Cursos del Periodo IV
+    </ion-list-header>
+      <ion-item>
+        JavaScript
+        <p>Nivel 3</p>
+      </ion-item>
+      <ion-item>
+        Angular
+        <p>Nivel 1</p>
+      </ion-item>
+      <ion-item>
+        Ionic
+        <p>Nivel 1</p>
+      </ion-item>
+      <ion-item>
+        Bootstrap
+        <p>Nivel 4</p>
+      </ion-item>
+  </ion-list>
+</ion-content>

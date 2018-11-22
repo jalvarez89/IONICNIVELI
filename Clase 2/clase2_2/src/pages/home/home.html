@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{titulo}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--CON SLIDES-->
+  <ion-slides>
+    <ion-slide *ngFor="let n of cursosObj">
+        <ion-card>
+            <img src="{{n.foto}}">
+            <ion-card-content>
+              <ion-card-title>
+               Curso de {{n.nombre}}
+              </ion-card-title>
+              <p>Precio:{{n.precio.toFixed(2)}}</p>
+              <button ion-button icon-end *ngIf="n.disponible">
+                Inscribirse
+                <ion-icon name="add.circle"></ion-icon>
+              </button>
+              <button ion-button color="danger" icon-end *ngIf="!n.disponible">
+                  No Disponible
+                  <ion-icon name="add.circle"></ion-icon>
+              </button>
+            </ion-card-content>
+          </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <!--CON CARDS-->
+  <ion-card *ngFor="let n of cursosObj">
+    <img src="{{n.foto}}">
+    <ion-card-content>
+      <ion-card-title>
+       Curso de {{n.nombre}}
+      </ion-card-title>
+      <p>Precio: {{n.precio.toFixed(2)}}</p>
+      <button ion-button icon-end *ngIf="n.disponible">
+        Inscribirse
+        <ion-icon name="add.circle"></ion-icon>
+      </button>
+      <button ion-button color="danger" icon-end *ngIf="!n.disponible">
+          No Disponible
+          <ion-icon name="add.circle"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <!--CON LISTAS-->
+  {{subtitulo}}
+  <ion-list>
+    <ion-item *ngFor="let n of cursos">
+      {{n}}
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item *ngFor="let n of cursosObj">
+      <ion-avatar item-start>
+        <img src="{{n.foto}}"/>
+      </ion-avatar>
+      <h2>{{n.nombre}}</h2>
+      <p>{{n.precio.toFixed(2)}} Bs.</p>
+      <button *ngIf="n.disponible" ion-button icon-only item-end clear>
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+      <p item-end *ngIf="!n.disponible">No Disponible</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
